@@ -1,0 +1,58 @@
+{
+  "name": "nodify-shopify",
+  "version": "0.2.1",
+  "description": "Shopify API client",
+  "main": "lib/main.js",
+  "directories": {
+    "test": "test"
+  },
+  "engines": {
+    "node": ">=0.12.0"
+  },
+  "dependencies": {
+    "pluralize": "1.2.x",
+    "qs": "5.2.x",
+    "request": "2.9.x",
+    "singleton": "1.0.x"
+  },
+  "devDependencies": {
+    "coffee-script": "1.10.x",
+    "docco": "0.7.x",
+    "mocha": "2.3.x",
+    "nock": "3.0.x",
+    "paige": "0.1.x",
+    "pre-commit": "1.1.x",
+    "should": "7.1.x"
+  },
+  "scripts": {
+    "compile": "coffee -o lib -c src",
+    "watch": "coffee -o lib -cw src",
+    "docs": "paige paige.config",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/microapps/Nodify-Shopify.git"
+  },
+  "keywords": [
+    "Shopify",
+    "API",
+    "Client"
+  ],
+  "author": {
+    "name": "alexandre saiz",
+    "email": "a@alexandresaiz.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/microapps/Nodify-Shopify/issues"
+  },
+  "homepage": "https://github.com/microapps/Nodify-Shopify",
+  "readme": "# Nodify-Shopify\r\n\r\n[![Version npm](https://img.shields.io/npm/v/nodify-shopify.svg)](https://www.npmjs.com/package/nodify-shopify)\r\n[![Build Status](https://img.shields.io/travis/microapps/Nodify-Shopify/master.svg)](https://travis-ci.org/microapps/Nodify-Shopify)\r\n\r\nNode connector for the Shopify API. Talk to Shopify API speaking node!\r\n\r\nUse Nodify-Shopify to grab all Shopify API resources.\r\nIt also handles authentication (using [the new OAuth2 API](http://www.shopify.com/technology/5922341-sound-the-trumpets-oauth2-has-arrived?ref=microapps)) and billing.\r\n\r\n## Usage:\r\n\r\n#### Private app\r\n\r\n```js\r\nvar nodify = require('nodify-shopify');\r\nvar session = nodify.createPrivateAppSession('your-shop-name', 'your-api-key', 'your-password');\r\n\r\nsession.orders.all({ limit: 5 }, function (err, orders) {\r\n  if (err) throw err;\r\n\r\n  console.log(orders);\r\n});\r\n```\r\n\r\n#### Public app\r\n\r\n```js\r\nvar nodify = require('nodify-shopify');\r\nvar session = nodify.createSession(shopName, apiKey, secret, persistentOauth2Token);\r\n\r\nsession.order.all({ limit: 5 }, function (err, orders) {\r\n  if (err) throw err;\r\n\r\n  console.log(orders);\r\n});\r\n```\r\n\r\nYou also have a Demo app to get the ball rolling, called [Nodify-App](https://github.com/microapps/Nodify-App).\r\nCheck that out to get a better understanding of how this module works, notably in case you want to dynamically\r\nretrieve the OAuth2 token, or check the tests.\r\n\r\n## Installation:\r\n\r\n```shell\r\n$ npm install nodify-shopify\r\n```\r\n\r\n## Dependencies:\r\n\r\n[request](https://www.npmjs.org/package/request)\r\n\r\nInstall dependencies:\r\n\r\n```shell\r\n$ npm install -d\r\n```\r\n\r\n## Become a master of the Shopify ecosystem by:\r\n\r\n* [Becoming a Shopify App Developer](https://app.shopify.com/services/partners/signup?ref=microapps)\r\n* [Checking out the roots](https://docs.shopify.com/api/introduction/getting-started?ref=microapps)\r\n* [Talking To Other Masters](https://ecommerce.shopify.com/c/shopify-apps?ref=microapps)\r\n* [Reading API Docs](https://docs.shopify.com/api?ref=microapps)\r\n* [Learning from others](http://stackoverflow.com/questions/tagged/shopify)\r\n\r\n## Use a frontend framework which mimics the Shopify merchant admin:\r\n\r\n[Shopify Embedded App Frontent Framework](http://seaff.microapps.com?utm_source=nodify-module-repo-readme&utm_medium=click&utm_campaign=github)\r\n\r\n## Contributors:\r\n\r\n* [Aakash Goel](https://github.com/aakashlpin)\r\n* [Alexandre Saiz Verdaguer](https://github.com/alexandresaiz/)\r\n* [Alua Kinzhebayeva](https://github.com/Alua-Kinzhebayeva)\r\n* [Carlos Villuendas Zambrana](https://github.com/carlosvillu/)\r\n* [Florian Traverse](https://github.com/temsa/)\r\n* [Kenrick Beckett](https://github.com/kenrick/)\r\n* [Khang Hoang Trieu](https://github.com/khanghoang)\r\n* [Luigi Pinca](https://github.com/lpinca)\r\n* [Will Laurance](https://github.com/wlaurance)\r\n\r\nSupported by [microapps](http://www.microapps.com/?utm_source=nodify-module-repo-readme&utm_medium=click&utm_campaign=github)\r\n\r\n## License\r\n\r\n[MIT](LICENSE)\r\n",
+  "readmeFilename": "README.md",
+  "gitHead": "73a53cfc28d5ea301fc2da75b5d91a7c2dc4bcaf",
+  "_id": "nodify-shopify@0.2.1",
+  "_shasum": "71bb0d874fd27a9778893e35094ee1c8867f1469",
+  "_from": "git+https://github.com/microapps/Nodify-Shopify.git",
+  "_resolved": "git+https://github.com/microapps/Nodify-Shopify.git#73a53cfc28d5ea301fc2da75b5d91a7c2dc4bcaf"
+}
