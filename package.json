@@ -12,7 +12,7 @@
   "dependencies": {
     "pluralize": "1.2.x",
     "qs": ">=6.0.4",
-    "request": "2.9.x",
+    "request": "2.72.0",
     "singleton": "1.0.x"
   },
   "devDependencies": {
