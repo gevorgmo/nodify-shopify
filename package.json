@@ -1,6 +1,6 @@
 {
   "name": "nodify-shopify",
-  "version": "0.2.4",
+  "version": "0.2.7",
   "description": "Shopify API client",
   "main": "lib/main.js",
   "directories": {
